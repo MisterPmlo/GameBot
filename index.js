@@ -7,7 +7,7 @@ const fs = require("fs");
 client.on("ready", () => {
     console.log("Je suis en ligne !");
     client.user.setGame("utilisez |help");
-    var channel = client.channels.get('454331715205333015');
+    var channel = client.channels.get('455025625359712262');
     channel.sendMessage({embed: {
       color: 16711680,
       author: {
@@ -26,7 +26,7 @@ client.on("ready", () => {
 
 
 client.on("guildMemberAdd", member => {
-  const channel = client.channels.get('453218649134727183');
+  const channel = client.channels.get('378871620611211276');
   channel.send(`☻ ▬▬▬▬[And Game Community]▬▬▬▬ ☻ \n
 
 Hey ! Souhaitez tous la bienvenue à ${member} \n 
@@ -164,7 +164,6 @@ if (message.content.startsWith(config.prefix + 'clear')) {
       const fetched = await message.channel.fetchMessages({limit: args[0]});
       console.log(fetched.size + ' messages found, deleting...');
       message.channel.bulkDelete(fetched)
-          .catch(error => message.channel.send(`Error: ${error}`));
   }
   purge();
 }
